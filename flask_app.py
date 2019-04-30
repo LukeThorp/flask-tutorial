@@ -11,4 +11,5 @@ def hello():
 def api():
     if request.method == "GET":
         data = [{"some":"json"}]
+    data = [{"some":"post"}]
     return jsonify(data)
