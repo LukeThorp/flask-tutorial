@@ -10,6 +10,6 @@ def hello():
 @app.route("/api", methods=["GET","POST"])
 def api():
     if request.method == "GET":
-        data = [{"some":"json"}]
+        return jsonify([{"some":"json"}])
     data = [{"some":"post"}]
     return jsonify(data)
