@@ -7,7 +7,8 @@ app.config["DEBUG"] = True
 def hello():
     return "Hello World!"
 
-@app.route("/api")
+@app.route("/api", methods=["GET","POST"])
 def api():
-    data = {"some":"json"}
+    if request.method == "GET":
+        data = [{"some":"json"}]
     return jsonify(data)
